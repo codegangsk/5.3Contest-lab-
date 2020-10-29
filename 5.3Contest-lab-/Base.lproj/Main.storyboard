@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="78" width="317.5" height="30"/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
-                                            <segue destination="vHF-bX-12e" kind="show" identifier="enteredContestSegue" id="3jN-2u-HVU"/>
+                                            <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NlA-Q2-Rj8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -47,6 +47,11 @@
                             <constraint firstItem="8vv-Ll-yQl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="po0-d8-4xs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="RLw-s0-Z81" id="BHo-Bc-oub"/>
+                        <outlet property="submitButton" destination="8MG-RM-5fy" id="3ve-LL-Gfq"/>
+                        <segue destination="vHF-bX-12e" kind="show" identifier="enteredContestSegue" id="nbI-Hs-pXe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,11 +67,11 @@
                         <viewLayoutGuide key="safeArea" id="JLb-EW-wdK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="054-KH-RoK"/>
+                    <navigationItem key="navigationItem" id="n57-58-GbC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJA-lj-SU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="94"/>
+            <point key="canvasLocation" x="794" y="94"/>
         </scene>
     </scenes>
     <resources>

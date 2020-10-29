@@ -8,12 +8,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var submitButton: UIButton!
 }
 
+extension ViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+
+extension ViewController {
+    @IBAction func submit(_ sender: UIButton) {
+        if emailTextField.text!.isEmpty == true {
+            UIView.animate(withDuration: 0.2, animations: {
+                self.emailTextField.transform = CGAffineTransform(translationX: 5, y: 0)
+            }) {(_) in
+            UIView.animate(withDuration: 0.2, animations: {
+                self.emailTextField.transform = CGAffineTransform.identity
+            })
+        }
+    }
+}
+}
