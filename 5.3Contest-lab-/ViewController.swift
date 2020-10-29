@@ -28,6 +28,8 @@ extension ViewController {
                 self.emailTextField.transform = CGAffineTransform.identity
             })
         }
-    }
+        } else {
+            performSegue(withIdentifier: "enteredContestSegue", sender: nil)
+        }
 }
 }
